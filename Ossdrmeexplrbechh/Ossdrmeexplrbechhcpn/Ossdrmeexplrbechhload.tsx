@@ -26,7 +26,7 @@ const Ossdrmeexplrbechhload = () => {
 
   return (
     <ImageBackground
-      source={require('../../assets/i/ossdrmeexplrbecloadbg.png')}
+      source={require('../../assets/i/ossdrmeexplrbecloaon3.png')}
       style={styles.ossdrmeexplrbechimageBg}>
       <ScrollView
         contentContainerStyle={styles.ossdrmeexplrbechscrollContent}

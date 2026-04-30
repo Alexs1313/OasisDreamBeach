@@ -12,7 +12,7 @@ const Ossdrmeexplrbechhlayt = ({
 }) => {
   return (
     <LinearGradient
-      colors={['#050D1A', '#071221', '#0A1628']}
+      colors={['rgb(4, 13, 28)', 'rgb(16, 47, 93)', 'rgb(9, 22, 42)']}
       style={styles.ossdrmeexplrbechcontainer}>
       <ScrollView
         bounces={bounces}

@@ -1,4 +1,4 @@
-package com.oasisdreambeach
+package com.oasis.beach.guide
 
 import android.app.Application
 import com.facebook.react.PackageList

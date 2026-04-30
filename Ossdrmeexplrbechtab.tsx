@@ -123,7 +123,7 @@ const OssdrmeexplrbechhIcon = ({
 const ossdrmeexplrbechhBarBackground = () => (
   <LinearGradient
     pointerEvents="none"
-    colors={['#020810', '#020810']}
+    colors={['rgb(14, 34, 66)', '#020810']}
     style={StyleSheet.absoluteFill}
   />
 );

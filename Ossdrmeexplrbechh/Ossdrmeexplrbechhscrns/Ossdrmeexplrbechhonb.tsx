@@ -33,7 +33,7 @@ const Ossdrmeexplrbechhonb = () => {
         id: 'welcome',
         bg: require('../../assets/i/ossdrmeexplrbecloadbg.png'),
         pill: 'WELCOME TO',
-        title: Platform.OS === 'ios' ? 'OASIS DREAM' : 'OASIS DREAM BEACH',
+        title: Platform.OS === 'ios' ? 'OASIS DREAM' : 'OASIS BEACH GUIDE',
         subtitle:
           'Exclusive shores. Hidden worlds. Discover the ocean’s finest secrets.',
         cta: 'CONTINUE',
