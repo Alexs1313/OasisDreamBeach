@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   ScrollView,
   StyleSheet,
   View,
@@ -31,7 +32,20 @@ const Ossdrmeexplrbechhload = () => {
         contentContainerStyle={styles.ossdrmeexplrbechscrollContent}
         showsVerticalScrollIndicator={false}>
         <View style={styles.ossdrmeexplrbechcenter}>
-          <Image source={require('../../assets/i/ossdrmeexplrbecload.png')} />
+          <Image
+            source={
+              Platform.OS === 'ios'
+                ? require('../../assets/i/ossdrmeexplrbecload.png')
+                : require('../../assets/i/ossdrmeexplrbecand.png')
+            }
+            style={
+              Platform.OS === 'android' && {
+                width: 210,
+                height: 210,
+                borderRadius: 60,
+              }
+            }
+          />
         </View>
       </ScrollView>
     </ImageBackground>
