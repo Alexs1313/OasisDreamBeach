@@ -1,4 +1,5 @@
 import LinearGradient from 'react-native-linear-gradient';
+
 import {useNavigation} from '@react-navigation/native';
 
 import React, {useMemo, useState} from 'react';
@@ -33,9 +34,10 @@ const Ossdrmeexplrbechhonb = () => {
         id: 'welcome',
         bg: require('../../assets/i/ossdrmeexplrbecloadbg.png'),
         pill: 'WELCOME TO',
-        title: Platform.OS === 'ios' ? 'OASIS DREAM' : 'OASIS DREAM BEACH',
+        title:
+          Platform.OS === 'ios' ? 'OASIS BEACH GUIDE' : 'OASIS DREAM BEACH',
         subtitle:
-          'Exclusive shores. Hidden worlds. Discover the ocean’s finest secrets.',
+          'Curated shores. Hidden worlds. Discover the ocean’s finest secrets.',
         cta: 'CONTINUE',
       },
 

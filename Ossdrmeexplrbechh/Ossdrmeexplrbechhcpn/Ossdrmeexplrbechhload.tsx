@@ -38,13 +38,11 @@ const Ossdrmeexplrbechhload = () => {
                 ? require('../../assets/i/ossdrmeexplrbecload.png')
                 : require('../../assets/i/ossdrmeexplrbecand.png')
             }
-            style={
-              Platform.OS === 'android' && {
-                width: 210,
-                height: 210,
-                borderRadius: 60,
-              }
-            }
+            style={{
+              width: 210,
+              height: 210,
+              borderRadius: 60,
+            }}
           />
         </View>
       </ScrollView>

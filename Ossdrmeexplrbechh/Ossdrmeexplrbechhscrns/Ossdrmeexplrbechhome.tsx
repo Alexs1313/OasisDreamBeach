@@ -18,6 +18,7 @@ import {
   ossdrmeexplrbechhGetDailySafetyTip,
   ossdrmeexplrbechhLocations,
 } from '../Ossdrmeexplrbechhdata/ossdrmeexplrbechhdata';
+
 import LinearGradient from 'react-native-linear-gradient';
 
 const Ossdrmeexplrbechhome = () => {
@@ -62,7 +63,7 @@ const Ossdrmeexplrbechhome = () => {
         <View style={styles.ossdrmeexplrbechheader}>
           <View>
             <Text style={styles.ossdrmeexplrbechgoodMorning}>GOOD MORNING</Text>
-            <Text style={styles.ossdrmeexplrbechbrand}>OASIS DREAM</Text>
+            <Text style={styles.ossdrmeexplrbechbrand}>OASIS BEACH GUIDE</Text>
           </View>
           <View style={styles.ossdrmeexplrbechavatarBtn}>
             <Image
@@ -288,7 +289,7 @@ const styles = StyleSheet.create({
   ossdrmeexplrbechbrand: {
     color: '#E7F7FF',
     fontSize: 20,
-    letterSpacing: 2,
+
     fontFamily: 'Cinzel-Bold',
   },
 

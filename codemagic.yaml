@@ -1,20 +1,20 @@
 workflows:
   ios-workflow:
-    name: 'Oasis Dream'
+    name: 'Oasis Beach Guide'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: OasisBeachAPIKey
+      app_store_connect: OasisBeachGuideAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.ghjdor.jgkqhd
+        bundle_identifier: com.ghskbbl.ghryee
       vars:
-        BUNDLE_ID: com.ghjdor.jgkqhd
+        BUNDLE_ID: com.ghskbbl.ghryee
         XCODE_WORKSPACE: OasisDreamBeach.xcworkspace
         XCODE_SCHEME: OasisDreamBeach
-        APP_STORE_APPLE_ID: 6764762481
+        APP_STORE_APPLE_ID: 6766209012
     scripts:
       - name: Install npm dependencies
         script: |
