@@ -1,20 +1,20 @@
 workflows:
   ios-workflow:
-    name: 'Oasis Beach Guide'
+    name: 'Oasis Shore Explorer'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: OasisBeachGuideAPIKey
+      app_store_connect: ShoreExplorerAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.ghskbbl.ghryee
+        bundle_identifier: com.dddjfexplrrr.rhyq
       vars:
-        BUNDLE_ID: com.ghskbbl.ghryee
+        BUNDLE_ID: com.dddjfexplrrr.rhyq
         XCODE_WORKSPACE: OasisDreamBeach.xcworkspace
         XCODE_SCHEME: OasisDreamBeach
-        APP_STORE_APPLE_ID: 6766209012
+        APP_STORE_APPLE_ID: 6766246650
     scripts:
       - name: Install npm dependencies
         script: |

@@ -1,4 +1,4 @@
-import {ossdrmeexplrbechhLocations} from '../Ossdrmeexplrbechhdata/ossdrmeexplrbechhdata';
+import {ockeanguudexplrrhLocations} from '../Ockeanguudexplrrhdata/ockeanguudexplrrhdata';
 import Orientation from 'react-native-orientation-locker';
 
 import React, {useCallback, useMemo, useRef, useState} from 'react';
@@ -15,16 +15,16 @@ import MapView, {Marker, PROVIDER_GOOGLE, type Region} from 'react-native-maps';
 import LinearGradient from 'react-native-linear-gradient';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 
-import Ossdrmeexplrbechhlayt from '../Ossdrmeexplrbechhcpn/Ossdrmeexplrbechhlayt';
+import Ockeanguudexplrrhlayt from '../Ockeanguudexplrrhcpn/Ockeanguudexplrrhlayt';
 
-const Ossdrmeexplrbechhmap = () => {
-  const ossdrmeexplrbechNavigation = useNavigation<any>();
+const Ockeanguudexplrrhmap = () => {
+  const ockeanguudexplrrNavigation = useNavigation<any>();
 
-  const [ossdrmeexplrbechSelectedId, setOssdrmeexplrbechSelectedId] = useState<
+  const [ockeanguudexplrrSelectedId, setOckeanguudexplrrSelectedId] = useState<
     string | null
   >(null);
 
-  const ossdrmeexplrbechIgnoreNextMapPress = useRef(false);
+  const ockeanguudexplrrIgnoreNextMapPress = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -36,8 +36,8 @@ const Ossdrmeexplrbechhmap = () => {
     }, []),
   );
 
-  const ossdrmeexplrbechDestinations = useMemo(() => {
-    return ossdrmeexplrbechhLocations.filter(d => {
+  const ockeanguudexplrrDestinations = useMemo(() => {
+    return ockeanguudexplrrhLocations.filter(d => {
       const lat = Number(d.coordinates?.lat);
       const long = Number(d.coordinates?.long);
 
@@ -52,14 +52,14 @@ const Ossdrmeexplrbechhmap = () => {
     });
   }, []);
 
-  const ossdrmeexplrbechSelected = useMemo(() => {
-    return ossdrmeexplrbechDestinations.find(
-      d => d.id === ossdrmeexplrbechSelectedId,
+  const ockeanguudexplrrSelected = useMemo(() => {
+    return ockeanguudexplrrDestinations.find(
+      d => d.id === ockeanguudexplrrSelectedId,
     );
-  }, [ossdrmeexplrbechDestinations, ossdrmeexplrbechSelectedId]);
+  }, [ockeanguudexplrrDestinations, ockeanguudexplrrSelectedId]);
 
-  const ossdrmeexplrbechRegion: Region = useMemo(() => {
-    if (!ossdrmeexplrbechDestinations.length) {
+  const ockeanguudexplrrRegion: Region = useMemo(() => {
+    if (!ockeanguudexplrrDestinations.length) {
       return {
         latitude: 20,
         longitude: 0,
@@ -68,10 +68,10 @@ const Ossdrmeexplrbechhmap = () => {
       };
     }
 
-    const lats = ossdrmeexplrbechDestinations.map(d =>
+    const lats = ockeanguudexplrrDestinations.map(d =>
       Number(d.coordinates.lat),
     );
-    const longs = ossdrmeexplrbechDestinations.map(d =>
+    const longs = ockeanguudexplrrDestinations.map(d =>
       Number(d.coordinates.long),
     );
 
@@ -89,56 +89,56 @@ const Ossdrmeexplrbechhmap = () => {
       latitudeDelta: Math.min(100, Math.max(18, latitudeDelta || 18)),
       longitudeDelta: Math.min(180, Math.max(42, longitudeDelta || 42)),
     };
-  }, [ossdrmeexplrbechDestinations]);
+  }, [ockeanguudexplrrDestinations]);
 
-  const ossdrmeexplrbechOpenFullDetails = () => {
-    if (!ossdrmeexplrbechSelected) {
+  const ockeanguudexplrrOpenFullDetails = () => {
+    if (!ockeanguudexplrrSelected) {
       return;
     }
 
-    ossdrmeexplrbechNavigation.navigate('Ossdrmeexplrbechhloc', {
-      id: ossdrmeexplrbechSelected.id,
+    ockeanguudexplrrNavigation.navigate('Ockeanguudexplrrhloc', {
+      id: ockeanguudexplrrSelected.id,
     });
   };
 
   return (
-    <Ossdrmeexplrbechhlayt bounces={false}>
-      <View style={styles.ossdrmeexplrbechwrap}>
-        <View style={styles.ossdrmeexplrbechheader}>
+    <Ockeanguudexplrrhlayt bounces={false}>
+      <View style={styles.ockeanguudexplrrwrap}>
+        <View style={styles.ockeanguudexplrrheader}>
           <View>
-            <Text style={styles.ossdrmeexplrbechkicker}>EXPLORE</Text>
-            <Text style={styles.ossdrmeexplrbechtitle}>WORLD MAP</Text>
+            <Text style={styles.ockeanguudexplrrkicker}>EXPLORE</Text>
+            <Text style={styles.ockeanguudexplrrtitle}>WORLD MAP</Text>
           </View>
 
-          <View style={styles.ossdrmeexplrbechcountPill}>
-            <Text style={styles.ossdrmeexplrbechcountPillText}>
-              {`${ossdrmeexplrbechDestinations.length} DESTINATIONS`}
+          <View style={styles.ockeanguudexplrrcountPill}>
+            <Text style={styles.ockeanguudexplrrcountPillText}>
+              {`${ockeanguudexplrrDestinations.length} DESTINATIONS`}
             </Text>
           </View>
         </View>
 
-        <View style={styles.ossdrmeexplrbechmapFrame}>
-          <View style={styles.ossdrmeexplrbechcornerTL} />
-          <View style={styles.ossdrmeexplrbechcornerTR} />
-          <View style={styles.ossdrmeexplrbechcornerBL} />
-          <View style={styles.ossdrmeexplrbechcornerBR} />
+        <View style={styles.ockeanguudexplrrmapFrame}>
+          <View style={styles.ockeanguudexplrrcornerTL} />
+          <View style={styles.ockeanguudexplrrcornerTR} />
+          <View style={styles.ockeanguudexplrrcornerBL} />
+          <View style={styles.ockeanguudexplrrcornerBR} />
 
           <MapView
             provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
             userInterfaceStyle="dark"
-            initialRegion={ossdrmeexplrbechRegion}
-            style={styles.ossdrmeexplrbechmap}
+            initialRegion={ockeanguudexplrrRegion}
+            style={styles.ockeanguudexplrrmap}
             onPress={() => {
-              if (ossdrmeexplrbechIgnoreNextMapPress.current) {
-                ossdrmeexplrbechIgnoreNextMapPress.current = false;
+              if (ockeanguudexplrrIgnoreNextMapPress.current) {
+                ockeanguudexplrrIgnoreNextMapPress.current = false;
                 return;
               }
 
-              setOssdrmeexplrbechSelectedId(null);
+              setOckeanguudexplrrSelectedId(null);
             }}
-            customMapStyle={ossdrmeexplrbechMapStyle}>
-            {ossdrmeexplrbechDestinations.map(d => {
-              const focused = d.id === ossdrmeexplrbechSelectedId;
+            customMapStyle={ockeanguudexplrrMapStyle}>
+            {ockeanguudexplrrDestinations.map(d => {
+              const focused = d.id === ockeanguudexplrrSelectedId;
 
               return (
                 <Marker
@@ -148,83 +148,83 @@ const Ossdrmeexplrbechhmap = () => {
                     longitude: Number(d.coordinates.long),
                   }}
                   onPress={() => {
-                    ossdrmeexplrbechIgnoreNextMapPress.current = true;
-                    setOssdrmeexplrbechSelectedId(d.id);
+                    ockeanguudexplrrIgnoreNextMapPress.current = true;
+                    setOckeanguudexplrrSelectedId(d.id);
                   }}>
                   <View
                     style={[
-                      styles.ossdrmeexplrbechmarker,
-                      focused ? styles.ossdrmeexplrbechmarkerFocused : null,
+                      styles.ockeanguudexplrrmarker,
+                      focused ? styles.ockeanguudexplrrmarkerFocused : null,
                     ]}>
-                    <View style={styles.ossdrmeexplrbechmarkerInner} />
+                    <View style={styles.ockeanguudexplrrmarkerInner} />
                   </View>
                 </Marker>
               );
             })}
           </MapView>
 
-          {!ossdrmeexplrbechSelected ? (
-            <View style={styles.ossdrmeexplrbechhintWrap}>
-              <View style={styles.ossdrmeexplrbechhintDot} />
-              <Text style={styles.ossdrmeexplrbechhintText}>
+          {!ockeanguudexplrrSelected ? (
+            <View style={styles.ockeanguudexplrrhintWrap}>
+              <View style={styles.ockeanguudexplrrhintDot} />
+              <Text style={styles.ockeanguudexplrrhintText}>
                 Tap a marker to discover
               </Text>
             </View>
           ) : null}
         </View>
 
-        {ossdrmeexplrbechSelected ? (
-          <View style={styles.ossdrmeexplrbechsheet}>
+        {ockeanguudexplrrSelected ? (
+          <View style={styles.ockeanguudexplrrsheet}>
             <LinearGradient
               colors={['#0A1628', '#071221']}
-              style={styles.ossdrmeexplrbechsheetBg}
+              style={styles.ockeanguudexplrrsheetBg}
             />
 
             <Pressable
-              onPress={() => setOssdrmeexplrbechSelectedId(null)}
+              onPress={() => setOckeanguudexplrrSelectedId(null)}
               hitSlop={10}
-              style={styles.ossdrmeexplrbechsheetClose}>
-              <Text style={styles.ossdrmeexplrbechsheetCloseText}>×</Text>
+              style={styles.ockeanguudexplrrsheetClose}>
+              <Text style={styles.ockeanguudexplrrsheetCloseText}>×</Text>
             </Pressable>
 
-            <View style={styles.ossdrmeexplrbechsheetTop}>
+            <View style={styles.ockeanguudexplrrsheetTop}>
               <ImageBackground
-                source={ossdrmeexplrbechSelected.image}
-                style={styles.ossdrmeexplrbechsheetThumb}
-                imageStyle={styles.ossdrmeexplrbechsheetThumbImg}
+                source={ockeanguudexplrrSelected.image}
+                style={styles.ockeanguudexplrrsheetThumb}
+                imageStyle={styles.ockeanguudexplrrsheetThumbImg}
               />
 
-              <View style={styles.ossdrmeexplrbechsheetText}>
-                <Text style={styles.ossdrmeexplrbechsheetCoords}>
-                  {`${Number(ossdrmeexplrbechSelected.coordinates.lat).toFixed(
+              <View style={styles.ockeanguudexplrrsheetText}>
+                <Text style={styles.ockeanguudexplrrsheetCoords}>
+                  {`${Number(ockeanguudexplrrSelected.coordinates.lat).toFixed(
                     3,
                   )}° | ${Number(
-                    ossdrmeexplrbechSelected.coordinates.long,
+                    ockeanguudexplrrSelected.coordinates.long,
                   ).toFixed(3)}°`}
                 </Text>
 
-                <Text style={styles.ossdrmeexplrbechsheetTitle}>
-                  {ossdrmeexplrbechSelected.title}
+                <Text style={styles.ockeanguudexplrrsheetTitle}>
+                  {ockeanguudexplrrSelected.title}
                 </Text>
 
                 <Text
-                  style={styles.ossdrmeexplrbechsheetDesc}
+                  style={styles.ockeanguudexplrrsheetDesc}
                   numberOfLines={2}>
-                  {ossdrmeexplrbechSelected.description}
+                  {ockeanguudexplrrSelected.description}
                 </Text>
               </View>
             </View>
 
             <Pressable
-              onPress={ossdrmeexplrbechOpenFullDetails}
-              style={styles.ossdrmeexplrbechctaPress}>
+              onPress={ockeanguudexplrrOpenFullDetails}
+              style={styles.ockeanguudexplrrctaPress}>
               <LinearGradient
                 colors={['#0099CC', '#00D4FF']}
-                style={styles.ossdrmeexplrbechcta}>
+                style={styles.ockeanguudexplrrcta}>
                 <Image
                   source={require('../../assets/i/ossdrmeexpempvioew.png')}
                 />
-                <Text style={styles.ossdrmeexplrbechctaText}>
+                <Text style={styles.ockeanguudexplrrctaText}>
                   VIEW FULL DETAILS
                 </Text>
               </LinearGradient>
@@ -232,13 +232,13 @@ const Ossdrmeexplrbechhmap = () => {
           </View>
         ) : null}
       </View>
-    </Ossdrmeexplrbechhlayt>
+    </Ockeanguudexplrrhlayt>
   );
 };
 
-export default Ossdrmeexplrbechhmap;
+export default Ockeanguudexplrrhmap;
 
-const ossdrmeexplrbechMapStyle = [
+const ockeanguudexplrrMapStyle = [
   {elementType: 'geometry', stylers: [{color: '#0A1628'}]},
   {elementType: 'labels.text.fill', stylers: [{color: '#7BAFC4'}]},
   {elementType: 'labels.text.stroke', stylers: [{color: '#0A1628'}]},
@@ -262,7 +262,7 @@ const ossdrmeexplrbechMapStyle = [
 ];
 
 const styles = StyleSheet.create({
-  ossdrmeexplrbechcountPill: {
+  ockeanguudexplrrcountPill: {
     borderWidth: 1,
     borderColor: '#00D4FF40',
     backgroundColor: '#00D4FF14',
@@ -271,33 +271,33 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
 
-  ossdrmeexplrbechcountPillText: {
+  ockeanguudexplrrcountPillText: {
     color: '#00D4FF',
     fontSize: 10,
     letterSpacing: 2,
   },
 
-  ossdrmeexplrbechwrap: {
+  ockeanguudexplrrwrap: {
     flex: 1,
     paddingHorizontal: 18,
     paddingTop: 58,
     paddingBottom: 100,
   },
 
-  ossdrmeexplrbechheader: {
+  ockeanguudexplrrheader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 14,
   },
 
-  ossdrmeexplrbechkicker: {
+  ockeanguudexplrrkicker: {
     color: '#00D4FF',
     fontSize: 10,
     letterSpacing: 2,
   },
 
-  ossdrmeexplrbechtitle: {
+  ockeanguudexplrrtitle: {
     color: '#E7F7FF',
     fontSize: 20,
     letterSpacing: 2,
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
 
-  ossdrmeexplrbechmapFrame: {
+  ockeanguudexplrrmapFrame: {
     flex: 1,
     borderWidth: 1,
     borderColor: '#00D4FF26',
@@ -314,11 +314,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#050D1A',
   },
 
-  ossdrmeexplrbechmap: {
+  ockeanguudexplrrmap: {
     flex: 1,
   },
 
-  ossdrmeexplrbechcornerTL: {
+  ockeanguudexplrrcornerTL: {
     position: 'absolute',
     left: 10,
     top: 10,
@@ -330,7 +330,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechcornerTR: {
+  ockeanguudexplrrcornerTR: {
     position: 'absolute',
     right: 10,
     top: 10,
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechcornerBL: {
+  ockeanguudexplrrcornerBL: {
     position: 'absolute',
     left: 10,
     bottom: 10,
@@ -354,7 +354,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechcornerBR: {
+  ockeanguudexplrrcornerBR: {
     position: 'absolute',
     right: 10,
     bottom: 10,
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechmarker: {
+  ockeanguudexplrrmarker: {
     width: 18,
     height: 18,
     borderRadius: 9,
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00D4FF1A',
   },
 
-  ossdrmeexplrbechmarkerFocused: {
+  ockeanguudexplrrmarkerFocused: {
     borderColor: '#00D4FF',
     backgroundColor: '#00D4FF26',
     width: 24,
@@ -385,14 +385,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
 
-  ossdrmeexplrbechmarkerInner: {
+  ockeanguudexplrrmarkerInner: {
     width: 6,
     height: 6,
     borderRadius: 3,
     backgroundColor: '#00D4FF',
   },
 
-  ossdrmeexplrbechhintWrap: {
+  ockeanguudexplrrhintWrap: {
     position: 'absolute',
     bottom: 16,
     alignSelf: 'center',
@@ -408,19 +408,19 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechhintDot: {
+  ockeanguudexplrrhintDot: {
     width: 8,
     height: 8,
     borderRadius: 4,
     backgroundColor: '#00D4FF',
   },
 
-  ossdrmeexplrbechhintText: {
+  ockeanguudexplrrhintText: {
     color: '#7BAFC4',
     fontSize: 12,
   },
 
-  ossdrmeexplrbechsheet: {
+  ockeanguudexplrrsheet: {
     position: 'absolute',
     width: '92%',
     alignSelf: 'center',
@@ -432,7 +432,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
 
-  ossdrmeexplrbechsheetBg: {
+  ockeanguudexplrrsheetBg: {
     position: 'absolute',
     left: 0,
     right: 0,
@@ -440,7 +440,7 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 
-  ossdrmeexplrbechsheetClose: {
+  ockeanguudexplrrsheetClose: {
     position: 'absolute',
     right: 10,
     top: 10,
@@ -453,57 +453,57 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ossdrmeexplrbechsheetCloseText: {
+  ockeanguudexplrrsheetCloseText: {
     color: '#7BAFC4',
     fontSize: 16,
     lineHeight: 18,
   },
 
-  ossdrmeexplrbechsheetTop: {
+  ockeanguudexplrrsheetTop: {
     flexDirection: 'row',
     gap: 12,
     paddingRight: 24,
   },
 
-  ossdrmeexplrbechsheetThumb: {
+  ockeanguudexplrrsheetThumb: {
     width: 84,
     height: 84,
   },
 
-  ossdrmeexplrbechsheetThumbImg: {
+  ockeanguudexplrrsheetThumbImg: {
     borderRadius: 14,
   },
 
-  ossdrmeexplrbechsheetText: {
+  ockeanguudexplrrsheetText: {
     flex: 1,
   },
 
-  ossdrmeexplrbechsheetCoords: {
+  ockeanguudexplrrsheetCoords: {
     color: '#00D4FF80',
     fontSize: 10,
     marginBottom: 6,
   },
 
-  ossdrmeexplrbechsheetTitle: {
+  ockeanguudexplrrsheetTitle: {
     color: '#FFFFFF',
     fontSize: 16,
     fontFamily: 'Cinzel-Bold',
     marginBottom: 6,
   },
 
-  ossdrmeexplrbechsheetDesc: {
+  ockeanguudexplrrsheetDesc: {
     color: '#BEEBFFB3',
     fontSize: 11,
     lineHeight: 15,
   },
 
-  ossdrmeexplrbechctaPress: {
+  ockeanguudexplrrctaPress: {
     borderRadius: 14,
     overflow: 'hidden',
     marginTop: 12,
   },
 
-  ossdrmeexplrbechcta: {
+  ockeanguudexplrrcta: {
     height: 48,
     borderRadius: 14,
     alignItems: 'center',
@@ -512,7 +512,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
 
-  ossdrmeexplrbechctaText: {
+  ockeanguudexplrrctaText: {
     color: '#050D1A',
     fontSize: 12,
     fontWeight: '700',

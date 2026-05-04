@@ -1,6 +1,6 @@
 import type {ImageSourcePropType} from 'react-native';
 
-export type OssdrmeexplrbechhStory = {
+export type OckeanguudexplrrhStory = {
   id: string;
   title: string;
   tag: string;
@@ -10,7 +10,7 @@ export type OssdrmeexplrbechhStory = {
   image?: ImageSourcePropType;
 };
 
-export const ossdrmeexplrbechhStories: OssdrmeexplrbechhStory[] = [
+export const ockeanguudexplrrhStories: OckeanguudexplrrhStory[] = [
   {
     id: 'endless-blue-illusion',
     title: 'The Endless Blue Illusion',
@@ -72,6 +72,6 @@ export const ossdrmeexplrbechhStories: OssdrmeexplrbechhStory[] = [
   },
 ];
 
-export const ossdrmeexplrbechhGetStoryById = (id: string) => {
-  return ossdrmeexplrbechhStories.find(s => s.id === id);
+export const ockeanguudexplrrhGetStoryById = (id: string) => {
+  return ockeanguudexplrrhStories.find(s => s.id === id);
 };

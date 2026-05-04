@@ -15,7 +15,7 @@ import {
   type ImageSourcePropType,
 } from 'react-native';
 
-type OssdrmeexplrbechhOnbStep = {
+type OckeanguudexplrrhOnbStep = {
   id: string;
   bg: ImageSourcePropType;
   pill: string;
@@ -24,18 +24,17 @@ type OssdrmeexplrbechhOnbStep = {
   cta: string;
 };
 
-const Ossdrmeexplrbechhonb = () => {
-  const ossdrmeexplrbechNavigation = useNavigation<any>();
-  const [ossdrmeexplrbechStep, setOssdrmeexplrbechStep] = useState(0);
+const Ockeanguudexplrrhonb = () => {
+  const ockeanguudexplrrNavigation = useNavigation<any>();
+  const [ockeanguudexplrrStep, setOckeanguudexplrrStep] = useState(0);
 
-  const ossdrmeexplrbechSteps: OssdrmeexplrbechhOnbStep[] = useMemo(
+  const ockeanguudexplrrSteps: OckeanguudexplrrhOnbStep[] = useMemo(
     () => [
       {
         id: 'welcome',
         bg: require('../../assets/i/ossdrmeexplrbecloadbg.png'),
         pill: 'WELCOME TO',
-        title:
-          Platform.OS === 'ios' ? 'OASIS BEACH GUIDE' : 'OASIS DREAM BEACH',
+        title: Platform.OS === 'ios' ? 'OASIS SHORE EXPLORER' : 'OASIS SHORE',
         subtitle:
           'Curated shores. Hidden worlds. Discover the ocean’s finest secrets.',
         cta: 'CONTINUE',
@@ -72,63 +71,63 @@ const Ossdrmeexplrbechhonb = () => {
     [],
   );
 
-  const ossdrmeexplrbechCurrent = ossdrmeexplrbechSteps[ossdrmeexplrbechStep];
+  const ockeanguudexplrrCurrent = ockeanguudexplrrSteps[ockeanguudexplrrStep];
 
-  const ossdrmeexplrbechNext = async () => {
-    ossdrmeexplrbechStep === 3
-      ? ossdrmeexplrbechNavigation.replace('Ossdrmeexplrbechtab' as never)
-      : setOssdrmeexplrbechStep(v => v + 1);
+  const ockeanguudexplrrNext = async () => {
+    ockeanguudexplrrStep === 3
+      ? ockeanguudexplrrNavigation.replace('Ockeanguudexplrrtab' as never)
+      : setOckeanguudexplrrStep(v => v + 1);
   };
 
-  const ossdrmeexplrbechSkip = async () => {
-    ossdrmeexplrbechNavigation.replace('Ossdrmeexplrbechtab' as never);
+  const ockeanguudexplrrSkip = async () => {
+    ockeanguudexplrrNavigation.replace('Ockeanguudexplrrtab' as never);
   };
 
   return (
     <ImageBackground
-      source={ossdrmeexplrbechCurrent.bg}
-      style={styles.ossdrmeexplrbechbg}>
+      source={ockeanguudexplrrCurrent.bg}
+      style={styles.ockeanguudexplrrbg}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.ossdrmeexplrbechscrollContent}>
-        <View style={styles.ossdrmeexplrbechsafe}>
-          <View style={styles.ossdrmeexplrbechtopRow}>
-            <Pressable onPress={ossdrmeexplrbechSkip} hitSlop={12}>
-              <Text style={styles.ossdrmeexplrbechskip}>SKIP</Text>
+        contentContainerStyle={styles.ockeanguudexplrrscrollContent}>
+        <View style={styles.ockeanguudexplrrsafe}>
+          <View style={styles.ockeanguudexplrrtopRow}>
+            <Pressable onPress={ockeanguudexplrrSkip} hitSlop={12}>
+              <Text style={styles.ockeanguudexplrrskip}>SKIP</Text>
             </Pressable>
           </View>
 
-          <View style={styles.ossdrmeexplrbechlogo}>
+          <View style={styles.ockeanguudexplrrlogo}>
             <Image source={require('../../assets/i/ossdrmeexplrbecllg.png')} />
           </View>
 
-          <View style={styles.ossdrmeexplrbechcontent}>
-            <View style={styles.ossdrmeexplrbechpill}>
-              <Text style={styles.ossdrmeexplrbechpillText}>
-                {ossdrmeexplrbechCurrent.pill}
+          <View style={styles.ockeanguudexplrrcontent}>
+            <View style={styles.ockeanguudexplrrpill}>
+              <Text style={styles.ockeanguudexplrrpillText}>
+                {ockeanguudexplrrCurrent.pill}
               </Text>
             </View>
 
-            <Text style={styles.ossdrmeexplrbechtitle}>
-              {ossdrmeexplrbechCurrent.title}
+            <Text style={styles.ockeanguudexplrrtitle}>
+              {ockeanguudexplrrCurrent.title}
             </Text>
-            <Text style={styles.ossdrmeexplrbechsubtitle}>
-              {ossdrmeexplrbechCurrent.subtitle}
+            <Text style={styles.ockeanguudexplrrsubtitle}>
+              {ockeanguudexplrrCurrent.subtitle}
             </Text>
           </View>
 
-          <View style={styles.ossdrmeexplrbechbottom}>
-            <View style={styles.ossdrmeexplrbechdots}>
-              {ossdrmeexplrbechSteps.map((s, idx) => {
-                const active = idx === ossdrmeexplrbechStep;
+          <View style={styles.ockeanguudexplrrbottom}>
+            <View style={styles.ockeanguudexplrrdots}>
+              {ockeanguudexplrrSteps.map((s, idx) => {
+                const active = idx === ockeanguudexplrrStep;
                 return (
                   <View
                     key={s.id}
                     style={[
-                      styles.ossdrmeexplrbechdot,
+                      styles.ockeanguudexplrrdot,
                       active
-                        ? styles.ossdrmeexplrbechdotActive
-                        : styles.ossdrmeexplrbechdotIdle,
+                        ? styles.ockeanguudexplrrdotActive
+                        : styles.ockeanguudexplrrdotIdle,
                     ]}
                   />
                 );
@@ -136,13 +135,13 @@ const Ossdrmeexplrbechhonb = () => {
             </View>
 
             <Pressable
-              onPress={ossdrmeexplrbechNext}
-              style={styles.ossdrmeexplrbechctaPress}>
+              onPress={ockeanguudexplrrNext}
+              style={styles.ockeanguudexplrrctaPress}>
               <LinearGradient
                 colors={['#0099CC', '#00D4FF']}
-                style={styles.ossdrmeexplrbechcta}>
-                <Text style={styles.ossdrmeexplrbechctaText}>
-                  {ossdrmeexplrbechCurrent.cta}
+                style={styles.ockeanguudexplrrcta}>
+                <Text style={styles.ockeanguudexplrrctaText}>
+                  {ockeanguudexplrrCurrent.cta}
                 </Text>
                 <Image
                   source={require('../../assets/i/ossdrmeexplrbecarr.png')}
@@ -156,15 +155,17 @@ const Ossdrmeexplrbechhonb = () => {
   );
 };
 
-export default Ossdrmeexplrbechhonb;
+export default Ockeanguudexplrrhonb;
 
 const styles = StyleSheet.create({
-  ossdrmeexplrbechbg: {flex: 1},
-  ossdrmeexplrbechsafe: {flex: 1, paddingBottom: 50},
-  ossdrmeexplrbechlogo: {alignSelf: 'center', marginBottom: 5},
-  ossdrmeexplrbechscrollContent: {flexGrow: 1},
+  ockeanguudexplrrbg: {flex: 1},
 
-  ossdrmeexplrbechtopRow: {
+  ockeanguudexplrrsafe: {flex: 1, paddingBottom: 50},
+
+  ockeanguudexplrrlogo: {alignSelf: 'center', marginBottom: 5},
+  ockeanguudexplrrscrollContent: {flexGrow: 1},
+
+  ockeanguudexplrrtopRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -172,19 +173,19 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     marginBottom: 10,
   },
-  ossdrmeexplrbechskip: {
+  ockeanguudexplrrskip: {
     color: '#7BAFC4',
     fontSize: 14,
     fontWeight: '500',
   },
 
-  ossdrmeexplrbechcontent: {
+  ockeanguudexplrrcontent: {
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 26,
     paddingTop: 10,
   },
-  ossdrmeexplrbechpill: {
+  ockeanguudexplrrpill: {
     alignSelf: 'center',
     borderWidth: 1,
     borderColor: '#00D4FF40',
@@ -194,12 +195,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#00D4FF1F',
     marginBottom: 18,
   },
-  ossdrmeexplrbechpillText: {
+  ockeanguudexplrrpillText: {
     color: '#7DE8FF',
     letterSpacing: 2,
     fontSize: 10,
   },
-  ossdrmeexplrbechtitle: {
+  ockeanguudexplrrtitle: {
     color: '#00D1FF',
     fontSize: 34,
 
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Cinzel-Bold',
     marginBottom: 44,
   },
-  ossdrmeexplrbechsubtitle: {
+  ockeanguudexplrrsubtitle: {
     color: '#7BAFC4',
     textAlign: 'center',
     fontSize: 15,
@@ -218,24 +219,24 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  ossdrmeexplrbechbottom: {
+  ockeanguudexplrrbottom: {
     paddingHorizontal: 22,
   },
-  ossdrmeexplrbechdots: {
+  ockeanguudexplrrdots: {
     flexDirection: 'row',
     alignSelf: 'center',
     gap: 6,
     marginBottom: 16,
   },
-  ossdrmeexplrbechdot: {
+  ockeanguudexplrrdot: {
     height: 6,
     borderRadius: 999,
   },
-  ossdrmeexplrbechdotIdle: {width: 6, backgroundColor: '#FFFFFF33'},
-  ossdrmeexplrbechdotActive: {width: 26, backgroundColor: '#00D4FF'},
+  ockeanguudexplrrdotIdle: {width: 6, backgroundColor: '#FFFFFF33'},
+  ockeanguudexplrrdotActive: {width: 26, backgroundColor: '#00D4FF'},
 
-  ossdrmeexplrbechctaPress: {borderRadius: 14, overflow: 'hidden'},
-  ossdrmeexplrbechcta: {
+  ockeanguudexplrrctaPress: {borderRadius: 14, overflow: 'hidden'},
+  ockeanguudexplrrcta: {
     height: 47,
     borderRadius: 14,
     marginTop: 8,
@@ -250,12 +251,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  ossdrmeexplrbechctaText: {
+  ockeanguudexplrrctaText: {
     color: '#001018',
     fontSize: 13,
     fontWeight: '600',
   },
-  ossdrmeexplrbechctaArrow: {
+  ockeanguudexplrrctaArrow: {
     color: '#001018',
     fontSize: 18,
     marginTop: -1,

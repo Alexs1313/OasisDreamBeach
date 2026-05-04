@@ -11,27 +11,27 @@ import React, {useEffect} from 'react';
 
 import {useNavigation} from '@react-navigation/native';
 
-const Ossdrmeexplrbechhload = () => {
-  const ossdrmeexplrbechNavigation = useNavigation();
+const Ockeanguudexplrrhload = () => {
+  const ockeanguudexplrrNavigation = useNavigation();
 
   useEffect(() => {
-    const ossdrmeexplrbechTimer = setTimeout(() => {
-      ossdrmeexplrbechNavigation.navigate('Ossdrmeexplrbechhonb' as never);
+    const ockeanguudexplrrTimer = setTimeout(() => {
+      ockeanguudexplrrNavigation.navigate('Ockeanguudexplrrhonb' as never);
     }, 6000);
 
     return () => {
-      clearTimeout(ossdrmeexplrbechTimer);
+      clearTimeout(ockeanguudexplrrTimer);
     };
-  }, [ossdrmeexplrbechNavigation]);
+  }, [ockeanguudexplrrNavigation]);
 
   return (
     <ImageBackground
       source={require('../../assets/i/ossdrmeexplrbecloadbg.png')}
-      style={styles.ossdrmeexplrbechimageBg}>
+      style={styles.ockeanguudexplrrimageBg}>
       <ScrollView
-        contentContainerStyle={styles.ossdrmeexplrbechscrollContent}
+        contentContainerStyle={styles.ockeanguudexplrrscrollContent}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.ossdrmeexplrbechcenter}>
+        <View style={styles.ockeanguudexplrrcenter}>
           <Image
             source={
               Platform.OS === 'ios'
@@ -50,27 +50,27 @@ const Ossdrmeexplrbechhload = () => {
   );
 };
 
-export default Ossdrmeexplrbechhload;
+export default Ockeanguudexplrrhload;
 
 const styles = StyleSheet.create({
-  ossdrmeexplrbechimageBg: {
+  ockeanguudexplrrimageBg: {
     flex: 1,
   },
-  ossdrmeexplrbechscrollContent: {
+  ockeanguudexplrrscrollContent: {
     flexGrow: 1,
   },
-  ossdrmeexplrbechcenter: {
+  ockeanguudexplrrcenter: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
-  ossdrmeexplrbechbottomWrap: {
+  ockeanguudexplrrbottomWrap: {
     justifyContent: 'flex-end',
     alignItems: 'center',
     paddingBottom: 40,
   },
-  ossdrmeexplrbechbottomText: {
+  ockeanguudexplrrbottomText: {
     color: '#FFFFFF',
     fontSize: 12,
     fontFamily: 'DmSans-Regular',

@@ -1,14 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
 
-import Ossdrmeexplrbechhstackk from './Ossdrmeexplrbechh/Ossdrmeexplrbechhnav/Ossdrmeexplrbechhstackk.tsx';
-import {OssdrmeexplrbechhSavedProvider} from './Ossdrmeexplrbechh/Ossdrmeexplrbechhstore/Ossdrmeexplrbechhsaved';
+import Ockeanguudexplrrhstackk from './Ockeanguudexplrrh/Ockeanguudexplrrhnav/Ockeanguudexplrrhstackk.tsx';
+import {OckeanguudexplrrhSavedProvider} from './Ockeanguudexplrrh/Ockeanguudexplrrhstore/Ockeanguudexplrrhsaved';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <OssdrmeexplrbechhSavedProvider>
-        <Ossdrmeexplrbechhstackk />
-      </OssdrmeexplrbechhSavedProvider>
+      <OckeanguudexplrrhSavedProvider>
+        <Ockeanguudexplrrhstackk />
+      </OckeanguudexplrrhSavedProvider>
     </NavigationContainer>
   );
 };
