@@ -64,7 +64,7 @@ const Ockeanguudexplrrhome = () => {
         <View style={styles.ockeanguudexplrrheader}>
           <View>
             <Text style={styles.ockeanguudexplrrgoodMorning}>GOOD MORNING</Text>
-            <Text style={styles.ockeanguudexplrrbrand}>OASIS SHORE</Text>
+            <Text style={styles.ockeanguudexplrrbrand}>OASIC DREAM</Text>
           </View>
           <View style={styles.ockeanguudexplrravatarBtn}>
             <Image

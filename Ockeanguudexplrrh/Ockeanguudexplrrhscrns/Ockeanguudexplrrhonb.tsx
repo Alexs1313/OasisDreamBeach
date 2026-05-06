@@ -34,7 +34,7 @@ const Ockeanguudexplrrhonb = () => {
         id: 'welcome',
         bg: require('../../assets/i/ossdrmeexplrbecloadbg.png'),
         pill: 'WELCOME TO',
-        title: Platform.OS === 'ios' ? 'OASIS SHORE EXPLORER' : 'OASIS SHORE',
+        title: Platform.OS === 'ios' ? 'OASIC DREAM ENJOY' : 'OASIS SHORE',
         subtitle:
           'Curated shores. Hidden worlds. Discover the ocean’s finest secrets.',
         cta: 'CONTINUE',
