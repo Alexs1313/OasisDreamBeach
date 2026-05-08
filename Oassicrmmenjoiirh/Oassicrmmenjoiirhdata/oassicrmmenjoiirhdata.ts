@@ -1,6 +1,6 @@
 import type {ImageSourcePropType} from 'react-native';
 
-export type OckeanguudexplrrhLocation = {
+export type OassicrmmenjoiirhLocation = {
   id: string;
   title: string;
   country: string;
@@ -9,7 +9,7 @@ export type OckeanguudexplrrhLocation = {
   image?: ImageSourcePropType;
 };
 
-export const ockeanguudexplrrhLocations: OckeanguudexplrrhLocation[] = [
+export const oassicrmmenjoiirhLocations: OassicrmmenjoiirhLocation[] = [
   {
     id: 'whitehaven-beach',
     title: 'Whitehaven Beach',
@@ -120,13 +120,13 @@ export const ockeanguudexplrrhLocations: OckeanguudexplrrhLocation[] = [
   },
 ];
 
-export type OckeanguudexplrrhSafetyTip = {
+export type OassicrmmenjoiirhSafetyTip = {
   id: string;
   title: string;
   body: string;
 };
 
-export const ockeanguudexplrrhSafetyTips: OckeanguudexplrrhSafetyTip[] = [
+export const oassicrmmenjoiirhSafetyTips: OassicrmmenjoiirhSafetyTip[] = [
   {
     id: 'swim-parallel',
     title: 'Swim Parallel, Not Against',
@@ -179,17 +179,17 @@ export const ockeanguudexplrrhSafetyTips: OckeanguudexplrrhSafetyTip[] = [
   },
 ];
 
-export const ockeanguudexplrrhGetDailyIndex = (len: number) => {
+export const oassicrmmenjoiirhGetDailyIndex = (len: number) => {
   const day = Math.floor(Date.now() / (24 * 60 * 60 * 1000));
   return ((day % len) + len) % len;
 };
 
-export const ockeanguudexplrrhGetDailySafetyTip = () => {
-  return ockeanguudexplrrhSafetyTips[
-    ockeanguudexplrrhGetDailyIndex(ockeanguudexplrrhSafetyTips.length)
+export const oassicrmmenjoiirhGetDailySafetyTip = () => {
+  return oassicrmmenjoiirhSafetyTips[
+    oassicrmmenjoiirhGetDailyIndex(oassicrmmenjoiirhSafetyTips.length)
   ];
 };
 
-export const ockeanguudexplrrhGetLocationById = (id: string) => {
-  return ockeanguudexplrrhLocations.find(l => l.id === id);
+export const oassicrmmenjoiirhGetLocationById = (id: string) => {
+  return oassicrmmenjoiirhLocations.find(l => l.id === id);
 };

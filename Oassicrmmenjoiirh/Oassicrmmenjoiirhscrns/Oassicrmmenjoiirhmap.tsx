@@ -1,4 +1,4 @@
-import {ockeanguudexplrrhLocations} from '../Ockeanguudexplrrhdata/ockeanguudexplrrhdata';
+import {oassicrmmenjoiirhLocations} from '../Oassicrmmenjoiirhdata/oassicrmmenjoiirhdata';
 import Orientation from 'react-native-orientation-locker';
 
 import React, {useCallback, useMemo, useRef, useState} from 'react';
@@ -15,16 +15,16 @@ import MapView, {Marker, PROVIDER_GOOGLE, type Region} from 'react-native-maps';
 import LinearGradient from 'react-native-linear-gradient';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 
-import Ockeanguudexplrrhlayt from '../Ockeanguudexplrrhcpn/Ockeanguudexplrrhlayt';
+import Oassicrmmenjoiirhlayt from '../Oassicrmmenjoiirhcpn/Oassicrmmenjoiirhlayt';
 
-const Ockeanguudexplrrhmap = () => {
-  const ockeanguudexplrrNavigation = useNavigation<any>();
+const Oassicrmmenjoiirhmap = () => {
+  const oassicrmmenjoiirNavigation = useNavigation<any>();
 
-  const [ockeanguudexplrrSelectedId, setOckeanguudexplrrSelectedId] = useState<
+  const [oassicrmmenjoiirSelectedId, setOassicrmmenjoiirSelectedId] = useState<
     string | null
   >(null);
 
-  const ockeanguudexplrrIgnoreNextMapPress = useRef(false);
+  const oassicrmmenjoiirIgnoreNextMapPress = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -36,8 +36,8 @@ const Ockeanguudexplrrhmap = () => {
     }, []),
   );
 
-  const ockeanguudexplrrDestinations = useMemo(() => {
-    return ockeanguudexplrrhLocations.filter(d => {
+  const oassicrmmenjoiirDestinations = useMemo(() => {
+    return oassicrmmenjoiirhLocations.filter(d => {
       const lat = Number(d.coordinates?.lat);
       const long = Number(d.coordinates?.long);
 
@@ -52,14 +52,14 @@ const Ockeanguudexplrrhmap = () => {
     });
   }, []);
 
-  const ockeanguudexplrrSelected = useMemo(() => {
-    return ockeanguudexplrrDestinations.find(
-      d => d.id === ockeanguudexplrrSelectedId,
+  const oassicrmmenjoiirSelected = useMemo(() => {
+    return oassicrmmenjoiirDestinations.find(
+      d => d.id === oassicrmmenjoiirSelectedId,
     );
-  }, [ockeanguudexplrrDestinations, ockeanguudexplrrSelectedId]);
+  }, [oassicrmmenjoiirDestinations, oassicrmmenjoiirSelectedId]);
 
-  const ockeanguudexplrrRegion: Region = useMemo(() => {
-    if (!ockeanguudexplrrDestinations.length) {
+  const oassicrmmenjoiirRegion: Region = useMemo(() => {
+    if (!oassicrmmenjoiirDestinations.length) {
       return {
         latitude: 20,
         longitude: 0,
@@ -68,10 +68,10 @@ const Ockeanguudexplrrhmap = () => {
       };
     }
 
-    const lats = ockeanguudexplrrDestinations.map(d =>
+    const lats = oassicrmmenjoiirDestinations.map(d =>
       Number(d.coordinates.lat),
     );
-    const longs = ockeanguudexplrrDestinations.map(d =>
+    const longs = oassicrmmenjoiirDestinations.map(d =>
       Number(d.coordinates.long),
     );
 
@@ -89,56 +89,56 @@ const Ockeanguudexplrrhmap = () => {
       latitudeDelta: Math.min(100, Math.max(18, latitudeDelta || 18)),
       longitudeDelta: Math.min(180, Math.max(42, longitudeDelta || 42)),
     };
-  }, [ockeanguudexplrrDestinations]);
+  }, [oassicrmmenjoiirDestinations]);
 
-  const ockeanguudexplrrOpenFullDetails = () => {
-    if (!ockeanguudexplrrSelected) {
+  const oassicrmmenjoiirOpenFullDetails = () => {
+    if (!oassicrmmenjoiirSelected) {
       return;
     }
 
-    ockeanguudexplrrNavigation.navigate('Ockeanguudexplrrhloc', {
-      id: ockeanguudexplrrSelected.id,
+    oassicrmmenjoiirNavigation.navigate('Oassicrmmenjoiirhloc', {
+      id: oassicrmmenjoiirSelected.id,
     });
   };
 
   return (
-    <Ockeanguudexplrrhlayt bounces={false}>
-      <View style={styles.ockeanguudexplrrwrap}>
-        <View style={styles.ockeanguudexplrrheader}>
+    <Oassicrmmenjoiirhlayt bounces={false}>
+      <View style={styles.oassicrmmenjoiirwrap}>
+        <View style={styles.oassicrmmenjoiirheader}>
           <View>
-            <Text style={styles.ockeanguudexplrrkicker}>EXPLORE</Text>
-            <Text style={styles.ockeanguudexplrrtitle}>WORLD MAP</Text>
+            <Text style={styles.oassicrmmenjoiirkicker}>EXPLORE</Text>
+            <Text style={styles.oassicrmmenjoiirtitle}>WORLD MAP</Text>
           </View>
 
-          <View style={styles.ockeanguudexplrrcountPill}>
-            <Text style={styles.ockeanguudexplrrcountPillText}>
-              {`${ockeanguudexplrrDestinations.length} DESTINATIONS`}
+          <View style={styles.oassicrmmenjoiircountPill}>
+            <Text style={styles.oassicrmmenjoiircountPillText}>
+              {`${oassicrmmenjoiirDestinations.length} DESTINATIONS`}
             </Text>
           </View>
         </View>
 
-        <View style={styles.ockeanguudexplrrmapFrame}>
-          <View style={styles.ockeanguudexplrrcornerTL} />
-          <View style={styles.ockeanguudexplrrcornerTR} />
-          <View style={styles.ockeanguudexplrrcornerBL} />
-          <View style={styles.ockeanguudexplrrcornerBR} />
+        <View style={styles.oassicrmmenjoiirmapFrame}>
+          <View style={styles.oassicrmmenjoiircornerTL} />
+          <View style={styles.oassicrmmenjoiircornerTR} />
+          <View style={styles.oassicrmmenjoiircornerBL} />
+          <View style={styles.oassicrmmenjoiircornerBR} />
 
           <MapView
             provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
             userInterfaceStyle="dark"
-            initialRegion={ockeanguudexplrrRegion}
-            style={styles.ockeanguudexplrrmap}
+            initialRegion={oassicrmmenjoiirRegion}
+            style={styles.oassicrmmenjoiirmap}
             onPress={() => {
-              if (ockeanguudexplrrIgnoreNextMapPress.current) {
-                ockeanguudexplrrIgnoreNextMapPress.current = false;
+              if (oassicrmmenjoiirIgnoreNextMapPress.current) {
+                oassicrmmenjoiirIgnoreNextMapPress.current = false;
                 return;
               }
 
-              setOckeanguudexplrrSelectedId(null);
+              setOassicrmmenjoiirSelectedId(null);
             }}
-            customMapStyle={ockeanguudexplrrMapStyle}>
-            {ockeanguudexplrrDestinations.map(d => {
-              const focused = d.id === ockeanguudexplrrSelectedId;
+            customMapStyle={oassicrmmenjoiirMapStyle}>
+            {oassicrmmenjoiirDestinations.map(d => {
+              const focused = d.id === oassicrmmenjoiirSelectedId;
 
               return (
                 <Marker
@@ -148,83 +148,83 @@ const Ockeanguudexplrrhmap = () => {
                     longitude: Number(d.coordinates.long),
                   }}
                   onPress={() => {
-                    ockeanguudexplrrIgnoreNextMapPress.current = true;
-                    setOckeanguudexplrrSelectedId(d.id);
+                    oassicrmmenjoiirIgnoreNextMapPress.current = true;
+                    setOassicrmmenjoiirSelectedId(d.id);
                   }}>
                   <View
                     style={[
-                      styles.ockeanguudexplrrmarker,
-                      focused ? styles.ockeanguudexplrrmarkerFocused : null,
+                      styles.oassicrmmenjoiirmarker,
+                      focused ? styles.oassicrmmenjoiirmarkerFocused : null,
                     ]}>
-                    <View style={styles.ockeanguudexplrrmarkerInner} />
+                    <View style={styles.oassicrmmenjoiirmarkerInner} />
                   </View>
                 </Marker>
               );
             })}
           </MapView>
 
-          {!ockeanguudexplrrSelected ? (
-            <View style={styles.ockeanguudexplrrhintWrap}>
-              <View style={styles.ockeanguudexplrrhintDot} />
-              <Text style={styles.ockeanguudexplrrhintText}>
+          {!oassicrmmenjoiirSelected ? (
+            <View style={styles.oassicrmmenjoiirhintWrap}>
+              <View style={styles.oassicrmmenjoiirhintDot} />
+              <Text style={styles.oassicrmmenjoiirhintText}>
                 Tap a marker to discover
               </Text>
             </View>
           ) : null}
         </View>
 
-        {ockeanguudexplrrSelected ? (
-          <View style={styles.ockeanguudexplrrsheet}>
+        {oassicrmmenjoiirSelected ? (
+          <View style={styles.oassicrmmenjoiirsheet}>
             <LinearGradient
               colors={['#0A1628', '#071221']}
-              style={styles.ockeanguudexplrrsheetBg}
+              style={styles.oassicrmmenjoiirsheetBg}
             />
 
             <Pressable
-              onPress={() => setOckeanguudexplrrSelectedId(null)}
+              onPress={() => setOassicrmmenjoiirSelectedId(null)}
               hitSlop={10}
-              style={styles.ockeanguudexplrrsheetClose}>
-              <Text style={styles.ockeanguudexplrrsheetCloseText}>×</Text>
+              style={styles.oassicrmmenjoiirsheetClose}>
+              <Text style={styles.oassicrmmenjoiirsheetCloseText}>×</Text>
             </Pressable>
 
-            <View style={styles.ockeanguudexplrrsheetTop}>
+            <View style={styles.oassicrmmenjoiirsheetTop}>
               <ImageBackground
-                source={ockeanguudexplrrSelected.image}
-                style={styles.ockeanguudexplrrsheetThumb}
-                imageStyle={styles.ockeanguudexplrrsheetThumbImg}
+                source={oassicrmmenjoiirSelected.image}
+                style={styles.oassicrmmenjoiirsheetThumb}
+                imageStyle={styles.oassicrmmenjoiirsheetThumbImg}
               />
 
-              <View style={styles.ockeanguudexplrrsheetText}>
-                <Text style={styles.ockeanguudexplrrsheetCoords}>
-                  {`${Number(ockeanguudexplrrSelected.coordinates.lat).toFixed(
+              <View style={styles.oassicrmmenjoiirsheetText}>
+                <Text style={styles.oassicrmmenjoiirsheetCoords}>
+                  {`${Number(oassicrmmenjoiirSelected.coordinates.lat).toFixed(
                     3,
                   )}° | ${Number(
-                    ockeanguudexplrrSelected.coordinates.long,
+                    oassicrmmenjoiirSelected.coordinates.long,
                   ).toFixed(3)}°`}
                 </Text>
 
-                <Text style={styles.ockeanguudexplrrsheetTitle}>
-                  {ockeanguudexplrrSelected.title}
+                <Text style={styles.oassicrmmenjoiirsheetTitle}>
+                  {oassicrmmenjoiirSelected.title}
                 </Text>
 
                 <Text
-                  style={styles.ockeanguudexplrrsheetDesc}
+                  style={styles.oassicrmmenjoiirsheetDesc}
                   numberOfLines={2}>
-                  {ockeanguudexplrrSelected.description}
+                  {oassicrmmenjoiirSelected.description}
                 </Text>
               </View>
             </View>
 
             <Pressable
-              onPress={ockeanguudexplrrOpenFullDetails}
-              style={styles.ockeanguudexplrrctaPress}>
+              onPress={oassicrmmenjoiirOpenFullDetails}
+              style={styles.oassicrmmenjoiirctaPress}>
               <LinearGradient
                 colors={['#0099CC', '#00D4FF']}
-                style={styles.ockeanguudexplrrcta}>
+                style={styles.oassicrmmenjoiircta}>
                 <Image
                   source={require('../../assets/i/ossdrmeexpempvioew.png')}
                 />
-                <Text style={styles.ockeanguudexplrrctaText}>
+                <Text style={styles.oassicrmmenjoiirctaText}>
                   VIEW FULL DETAILS
                 </Text>
               </LinearGradient>
@@ -232,13 +232,13 @@ const Ockeanguudexplrrhmap = () => {
           </View>
         ) : null}
       </View>
-    </Ockeanguudexplrrhlayt>
+    </Oassicrmmenjoiirhlayt>
   );
 };
 
-export default Ockeanguudexplrrhmap;
+export default Oassicrmmenjoiirhmap;
 
-const ockeanguudexplrrMapStyle = [
+const oassicrmmenjoiirMapStyle = [
   {elementType: 'geometry', stylers: [{color: '#0A1628'}]},
   {elementType: 'labels.text.fill', stylers: [{color: '#7BAFC4'}]},
   {elementType: 'labels.text.stroke', stylers: [{color: '#0A1628'}]},
@@ -262,7 +262,7 @@ const ockeanguudexplrrMapStyle = [
 ];
 
 const styles = StyleSheet.create({
-  ockeanguudexplrrcountPill: {
+  oassicrmmenjoiircountPill: {
     borderWidth: 1,
     borderColor: '#00D4FF40',
     backgroundColor: '#00D4FF14',
@@ -271,33 +271,33 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
 
-  ockeanguudexplrrcountPillText: {
+  oassicrmmenjoiircountPillText: {
     color: '#00D4FF',
     fontSize: 10,
     letterSpacing: 2,
   },
 
-  ockeanguudexplrrwrap: {
+  oassicrmmenjoiirwrap: {
     flex: 1,
     paddingHorizontal: 18,
     paddingTop: 58,
     paddingBottom: 100,
   },
 
-  ockeanguudexplrrheader: {
+  oassicrmmenjoiirheader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 14,
   },
 
-  ockeanguudexplrrkicker: {
+  oassicrmmenjoiirkicker: {
     color: '#00D4FF',
     fontSize: 10,
     letterSpacing: 2,
   },
 
-  ockeanguudexplrrtitle: {
+  oassicrmmenjoiirtitle: {
     color: '#E7F7FF',
     fontSize: 20,
     letterSpacing: 2,
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
 
-  ockeanguudexplrrmapFrame: {
+  oassicrmmenjoiirmapFrame: {
     flex: 1,
     borderWidth: 1,
     borderColor: '#00D4FF26',
@@ -314,11 +314,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#050D1A',
   },
 
-  ockeanguudexplrrmap: {
+  oassicrmmenjoiirmap: {
     flex: 1,
   },
 
-  ockeanguudexplrrcornerTL: {
+  oassicrmmenjoiircornerTL: {
     position: 'absolute',
     left: 10,
     top: 10,
@@ -330,7 +330,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrcornerTR: {
+  oassicrmmenjoiircornerTR: {
     position: 'absolute',
     right: 10,
     top: 10,
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrcornerBL: {
+  oassicrmmenjoiircornerBL: {
     position: 'absolute',
     left: 10,
     bottom: 10,
@@ -354,7 +354,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrcornerBR: {
+  oassicrmmenjoiircornerBR: {
     position: 'absolute',
     right: 10,
     bottom: 10,
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrmarker: {
+  oassicrmmenjoiirmarker: {
     width: 18,
     height: 18,
     borderRadius: 9,
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00D4FF1A',
   },
 
-  ockeanguudexplrrmarkerFocused: {
+  oassicrmmenjoiirmarkerFocused: {
     borderColor: '#00D4FF',
     backgroundColor: '#00D4FF26',
     width: 24,
@@ -385,14 +385,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
 
-  ockeanguudexplrrmarkerInner: {
+  oassicrmmenjoiirmarkerInner: {
     width: 6,
     height: 6,
     borderRadius: 3,
     backgroundColor: '#00D4FF',
   },
 
-  ockeanguudexplrrhintWrap: {
+  oassicrmmenjoiirhintWrap: {
     position: 'absolute',
     bottom: 16,
     alignSelf: 'center',
@@ -408,19 +408,19 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrhintDot: {
+  oassicrmmenjoiirhintDot: {
     width: 8,
     height: 8,
     borderRadius: 4,
     backgroundColor: '#00D4FF',
   },
 
-  ockeanguudexplrrhintText: {
+  oassicrmmenjoiirhintText: {
     color: '#7BAFC4',
     fontSize: 12,
   },
 
-  ockeanguudexplrrsheet: {
+  oassicrmmenjoiirsheet: {
     position: 'absolute',
     width: '92%',
     alignSelf: 'center',
@@ -432,7 +432,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
 
-  ockeanguudexplrrsheetBg: {
+  oassicrmmenjoiirsheetBg: {
     position: 'absolute',
     left: 0,
     right: 0,
@@ -440,7 +440,7 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 
-  ockeanguudexplrrsheetClose: {
+  oassicrmmenjoiirsheetClose: {
     position: 'absolute',
     right: 10,
     top: 10,
@@ -453,57 +453,57 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  ockeanguudexplrrsheetCloseText: {
+  oassicrmmenjoiirsheetCloseText: {
     color: '#7BAFC4',
     fontSize: 16,
     lineHeight: 18,
   },
 
-  ockeanguudexplrrsheetTop: {
+  oassicrmmenjoiirsheetTop: {
     flexDirection: 'row',
     gap: 12,
     paddingRight: 24,
   },
 
-  ockeanguudexplrrsheetThumb: {
+  oassicrmmenjoiirsheetThumb: {
     width: 84,
     height: 84,
   },
 
-  ockeanguudexplrrsheetThumbImg: {
+  oassicrmmenjoiirsheetThumbImg: {
     borderRadius: 14,
   },
 
-  ockeanguudexplrrsheetText: {
+  oassicrmmenjoiirsheetText: {
     flex: 1,
   },
 
-  ockeanguudexplrrsheetCoords: {
+  oassicrmmenjoiirsheetCoords: {
     color: '#00D4FF80',
     fontSize: 10,
     marginBottom: 6,
   },
 
-  ockeanguudexplrrsheetTitle: {
+  oassicrmmenjoiirsheetTitle: {
     color: '#FFFFFF',
     fontSize: 16,
     fontFamily: 'Cinzel-Bold',
     marginBottom: 6,
   },
 
-  ockeanguudexplrrsheetDesc: {
+  oassicrmmenjoiirsheetDesc: {
     color: '#BEEBFFB3',
     fontSize: 11,
     lineHeight: 15,
   },
 
-  ockeanguudexplrrctaPress: {
+  oassicrmmenjoiirctaPress: {
     borderRadius: 14,
     overflow: 'hidden',
     marginTop: 12,
   },
 
-  ockeanguudexplrrcta: {
+  oassicrmmenjoiircta: {
     height: 48,
     borderRadius: 14,
     alignItems: 'center',
@@ -512,7 +512,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
 
-  ockeanguudexplrrctaText: {
+  oassicrmmenjoiirctaText: {
     color: '#050D1A',
     fontSize: 12,
     fontWeight: '700',

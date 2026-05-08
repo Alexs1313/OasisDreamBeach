@@ -1,16 +1,16 @@
-export type OckeanguudexplrrhQuizOptionKey = 'A' | 'B' | 'C';
+export type OassicrmmenjoiirhQuizOptionKey = 'A' | 'B' | 'C';
 
-export type OckeanguudexplrrhQuizQuestion = {
+export type OassicrmmenjoiirhQuizQuestion = {
   id: string;
   quiz: 1 | 2 | 3 | 4 | 5;
   category: string;
   question: string;
-  options: Record<OckeanguudexplrrhQuizOptionKey, string>;
-  answer: OckeanguudexplrrhQuizOptionKey;
+  options: Record<OassicrmmenjoiirhQuizOptionKey, string>;
+  answer: OassicrmmenjoiirhQuizOptionKey;
   explanation: string;
 };
 
-export const ockeanguudexplrrhQuizQuestions: OckeanguudexplrrhQuizQuestion[] = [
+export const oassicrmmenjoiirhQuizQuestions: OassicrmmenjoiirhQuizQuestion[] = [
   {
     id: 'q1_salty',
     quiz: 1,
@@ -357,7 +357,7 @@ export const ockeanguudexplrrhQuizQuestions: OckeanguudexplrrhQuizQuestion[] = [
   },
 ];
 
-export const ockeanguudexplrrhShuffle = <T,>(arr: T[]) => {
+export const oassicrmmenjoiirhShuffle = <T,>(arr: T[]) => {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

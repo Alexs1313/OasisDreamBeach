@@ -2,7 +2,7 @@ import React from 'react';
 import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Ockeanguudexplrrhlayt = ({
+const Oassicrmmenjoiirhlayt = ({
   children,
   bounces = true,
 }: {
@@ -13,10 +13,10 @@ const Ockeanguudexplrrhlayt = ({
   return (
     <LinearGradient
       colors={['#050D1A', '#071221', '#0A1628']}
-      style={styles.ockeanguudexplrrcontainer}>
+      style={styles.oassicrmmenjoiircontainer}>
       <ScrollView
         bounces={bounces}
-        contentContainerStyle={styles.ockeanguudexplrrscrollContent}
+        contentContainerStyle={styles.oassicrmmenjoiirscrollContent}
         showsVerticalScrollIndicator={false}>
         {children}
       </ScrollView>
@@ -24,17 +24,17 @@ const Ockeanguudexplrrhlayt = ({
   );
 };
 
-export default Ockeanguudexplrrhlayt;
+export default Oassicrmmenjoiirhlayt;
 
 const styles = StyleSheet.create({
-  ockeanguudexplrrscrollContent: {
+  oassicrmmenjoiirscrollContent: {
     flexGrow: 1,
   },
-  ockeanguudexplrrflexFill: {
+  oassicrmmenjoiirflexFill: {
     flex: 1,
   },
 
-  ockeanguudexplrrcontainer: {
+  oassicrmmenjoiircontainer: {
     flex: 1,
     backgroundColor: '#020810',
   },

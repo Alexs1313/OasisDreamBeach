@@ -15,20 +15,20 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import Ockeanguudexplrrhquz from './Ockeanguudexplrrh/Ockeanguudexplrrhscrns/Ockeanguudexplrrhquz';
-import Ockeanguudexplrrhmap from './Ockeanguudexplrrh/Ockeanguudexplrrhscrns/Ockeanguudexplrrhmap';
-import Ockeanguudexplrrhstries from './Ockeanguudexplrrh/Ockeanguudexplrrhscrns/Ockeanguudexplrrhstries';
-import Ockeanguudexplrrhome from './Ockeanguudexplrrh/Ockeanguudexplrrhscrns/Ockeanguudexplrrhome';
-import Ockeanguudexplrrhsvd from './Ockeanguudexplrrh/Ockeanguudexplrrhscrns/Ockeanguudexplrrhsvd';
+import Oassicrmmenjoiirhquz from './Oassicrmmenjoiirh/Oassicrmmenjoiirhscrns/Oassicrmmenjoiirhquz';
+import Oassicrmmenjoiirhmap from './Oassicrmmenjoiirh/Oassicrmmenjoiirhscrns/Oassicrmmenjoiirhmap';
+import Oassicrmmenjoiirhstries from './Oassicrmmenjoiirh/Oassicrmmenjoiirhscrns/Oassicrmmenjoiirhstries';
+import Oassicrmmenjoiirhome from './Oassicrmmenjoiirh/Oassicrmmenjoiirhscrns/Oassicrmmenjoiirhome';
+import Oassicrmmenjoiirhsvd from './Oassicrmmenjoiirh/Oassicrmmenjoiirhscrns/Oassicrmmenjoiirhsvd';
 
 const Tab = createBottomTabNavigator();
 
-const OckeanguudexplrrhAnimatedButton = (props: Record<string, unknown>) => {
+const OassicrmmenjoiirhAnimatedButton = (props: Record<string, unknown>) => {
   const {children, style, onPress, onLongPress, ...rest} = props;
-  const ockeanguudexplrrhScale = useRef(new Animated.Value(1)).current;
+  const oassicrmmenjoiirhScale = useRef(new Animated.Value(1)).current;
 
-  const ockeanguudexplrrhHandlePressIn = () => {
-    Animated.spring(ockeanguudexplrrhScale, {
+  const oassicrmmenjoiirhHandlePressIn = () => {
+    Animated.spring(oassicrmmenjoiirhScale, {
       toValue: 0.88,
       useNativeDriver: true,
       speed: 50,
@@ -41,8 +41,8 @@ const OckeanguudexplrrhAnimatedButton = (props: Record<string, unknown>) => {
     return;
   });
 
-  const ockeanguudexplrrhHandlePressOut = () => {
-    Animated.spring(ockeanguudexplrrhScale, {
+  const oassicrmmenjoiirhHandlePressOut = () => {
+    Animated.spring(oassicrmmenjoiirhScale, {
       toValue: 1,
       useNativeDriver: true,
       speed: 50,
@@ -54,14 +54,14 @@ const OckeanguudexplrrhAnimatedButton = (props: Record<string, unknown>) => {
     <Pressable
       onPress={onPress as () => void}
       onLongPress={onLongPress as (() => void) | undefined}
-      onPressIn={ockeanguudexplrrhHandlePressIn}
-      onPressOut={ockeanguudexplrrhHandlePressOut}
-      style={[style as ViewStyle, styles.ockeanguudexplrrhButton]}
+      onPressIn={oassicrmmenjoiirhHandlePressIn}
+      onPressOut={oassicrmmenjoiirhHandlePressOut}
+      style={[style as ViewStyle, styles.oassicrmmenjoiirhButton]}
       {...rest}>
       <Animated.View
         style={[
-          styles.ockeanguudexplrrhButtonInner,
-          {transform: [{scale: ockeanguudexplrrhScale}]},
+          styles.oassicrmmenjoiirhButtonInner,
+          {transform: [{scale: oassicrmmenjoiirhScale}]},
         ]}>
         {children as React.ReactNode}
       </Animated.View>
@@ -69,7 +69,7 @@ const OckeanguudexplrrhAnimatedButton = (props: Record<string, unknown>) => {
   );
 };
 
-const OckeanguudexplrrhIcon = ({
+const OassicrmmenjoiirhIcon = ({
   focused,
   source,
   label,
@@ -79,23 +79,23 @@ const OckeanguudexplrrhIcon = ({
   label: string;
 }) => {
   return (
-    <View style={styles.ockeanguudexplrrhIconWrap}>
+    <View style={styles.oassicrmmenjoiirhIconWrap}>
       {focused ? (
         <Image
           source={require('./assets/i/ossdrmeexplrbecsel.png')}
           style={{position: 'absolute', top: -6, right: -4}}
         />
       ) : null}
-      <View style={styles.ockeanguudexplrrhIconImageWrap}>
+      <View style={styles.oassicrmmenjoiirhIconImageWrap}>
         <Image source={source} tintColor={focused ? '#00D4FF' : '#FFFFFF4D'} />
       </View>
 
       <Text
         style={[
-          styles.ockeanguudexplrrhLabel,
+          styles.oassicrmmenjoiirhLabel,
           focused
-            ? styles.ockeanguudexplrrhLabelFocused
-            : styles.ockeanguudexplrrhLabelIdle,
+            ? styles.oassicrmmenjoiirhLabelFocused
+            : styles.oassicrmmenjoiirhLabelIdle,
         ]}>
         {label}
       </Text>
@@ -120,7 +120,7 @@ const OckeanguudexplrrhIcon = ({
   );
 };
 
-const ockeanguudexplrrhBarBackground = () => (
+const oassicrmmenjoiirhBarBackground = () => (
   <LinearGradient
     pointerEvents="none"
     colors={['#020810', '#020810']}
@@ -128,94 +128,94 @@ const ockeanguudexplrrhBarBackground = () => (
   />
 );
 
-const ockeanguudexplrrhIconPlaces = ({focused}: {focused: boolean}) => (
-  <OckeanguudexplrrhIcon
+const oassicrmmenjoiirhIconPlaces = ({focused}: {focused: boolean}) => (
+  <OassicrmmenjoiirhIcon
     focused={focused}
     label="Home"
-    source={require('./assets/i/ockeanguudexplrrtab1.png')}
+    source={require('./assets/i/oassicrmmenjoiirtab1.png')}
   />
 );
 
-const ockeanguudexplrrhIconSaved = ({focused}: {focused: boolean}) => (
-  <OckeanguudexplrrhIcon
+const oassicrmmenjoiirhIconSaved = ({focused}: {focused: boolean}) => (
+  <OassicrmmenjoiirhIcon
     focused={focused}
     label="Map"
-    source={require('./assets/i/ockeanguudexplrrtab2.png')}
+    source={require('./assets/i/oassicrmmenjoiirtab2.png')}
   />
 );
 
-const ockeanguudexplrrhIconMap = ({focused}: {focused: boolean}) => (
-  <OckeanguudexplrrhIcon
+const oassicrmmenjoiirhIconMap = ({focused}: {focused: boolean}) => (
+  <OassicrmmenjoiirhIcon
     focused={focused}
     label="Stories"
-    source={require('./assets/i/ockeanguudexplrrtab3.png')}
+    source={require('./assets/i/oassicrmmenjoiirtab3.png')}
   />
 );
 
-const ockeanguudexplrrhIconBlog = ({focused}: {focused: boolean}) => (
-  <OckeanguudexplrrhIcon
+const oassicrmmenjoiirhIconBlog = ({focused}: {focused: boolean}) => (
+  <OassicrmmenjoiirhIcon
     focused={focused}
     label="Quiz"
-    source={require('./assets/i/ockeanguudexplrrtab4.png')}
+    source={require('./assets/i/oassicrmmenjoiirtab4.png')}
   />
 );
 
-const ockeanguudexplrrhIconQuiz = ({focused}: {focused: boolean}) => (
-  <OckeanguudexplrrhIcon
+const oassicrmmenjoiirhIconQuiz = ({focused}: {focused: boolean}) => (
+  <OassicrmmenjoiirhIcon
     focused={focused}
     label="Saved"
-    source={require('./assets/i/ockeanguudexplrrtab5.png')}
+    source={require('./assets/i/oassicrmmenjoiirtab5.png')}
   />
 );
 
-const ockeanguudexplrrhButton = (props: Record<string, unknown>) => (
-  <OckeanguudexplrrhAnimatedButton {...props} />
+const oassicrmmenjoiirhButton = (props: Record<string, unknown>) => (
+  <OassicrmmenjoiirhAnimatedButton {...props} />
 );
 
-const Ockeanguudexplrrtab = () => {
+const Oassicrmmenjoiirtab = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: [styles.ockeanguudexplrrhBar],
+        tabBarStyle: [styles.oassicrmmenjoiirhBar],
         tabBarActiveTintColor: '#FFFFFF',
-        tabBarButton: ockeanguudexplrrhButton,
-        tabBarBackground: ockeanguudexplrrhBarBackground,
+        tabBarButton: oassicrmmenjoiirhButton,
+        tabBarBackground: oassicrmmenjoiirhBarBackground,
       }}>
       <Tab.Screen
-        name="Ockeanguudexplrrhome"
-        component={Ockeanguudexplrrhome}
+        name="Oassicrmmenjoiirhome"
+        component={Oassicrmmenjoiirhome}
         options={{
-          tabBarIcon: ockeanguudexplrrhIconPlaces,
+          tabBarIcon: oassicrmmenjoiirhIconPlaces,
         }}
       />
       <Tab.Screen
-        name="Ockeanguudexplrrhmap"
-        component={Ockeanguudexplrrhmap}
+        name="Oassicrmmenjoiirhmap"
+        component={Oassicrmmenjoiirhmap}
         options={{
-          tabBarIcon: ockeanguudexplrrhIconSaved,
+          tabBarIcon: oassicrmmenjoiirhIconSaved,
         }}
       />
       <Tab.Screen
-        name="Ockeanguudexplrrhstries"
-        component={Ockeanguudexplrrhstries}
+        name="Oassicrmmenjoiirhstries"
+        component={Oassicrmmenjoiirhstries}
         options={{
-          tabBarIcon: ockeanguudexplrrhIconMap,
+          tabBarIcon: oassicrmmenjoiirhIconMap,
         }}
       />
       <Tab.Screen
-        name="Ockeanguudexplrrhquz"
-        component={Ockeanguudexplrrhquz}
+        name="Oassicrmmenjoiirhquz"
+        component={Oassicrmmenjoiirhquz}
         options={{
-          tabBarIcon: ockeanguudexplrrhIconBlog,
+          tabBarIcon: oassicrmmenjoiirhIconBlog,
         }}
       />
       <Tab.Screen
-        name="Ockeanguudexplrrhsvd"
-        component={Ockeanguudexplrrhsvd}
+        name="Oassicrmmenjoiirhsvd"
+        component={Oassicrmmenjoiirhsvd}
         options={{
-          tabBarIcon: ockeanguudexplrrhIconQuiz,
+          tabBarIcon: oassicrmmenjoiirhIconQuiz,
         }}
       />
     </Tab.Navigator>
@@ -223,14 +223,14 @@ const Ockeanguudexplrrtab = () => {
 };
 
 const styles = StyleSheet.create({
-  ockeanguudexplrrhLabelFocused: {
+  oassicrmmenjoiirhLabelFocused: {
     color: '#00D4FF',
     fontSize: 9,
     fontWeight: '600',
     marginTop: 6,
     textAlign: 'center',
   },
-  ockeanguudexplrrhBar: {
+  oassicrmmenjoiirhBar: {
     elevation: 0,
     paddingTop: 10,
     justifyContent: 'center',
@@ -245,48 +245,48 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-  ockeanguudexplrrhButton: {
+  oassicrmmenjoiirhButton: {
     flex: 1,
   },
-  ockeanguudexplrrhButtonInner: {
+  oassicrmmenjoiirhButtonInner: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
-  ockeanguudexplrrhIconWrap: {
+  oassicrmmenjoiirhIconWrap: {
     alignItems: 'center',
     justifyContent: 'center',
     width: 55,
   },
-  ockeanguudexplrrhIconImageWrap: {
+  oassicrmmenjoiirhIconImageWrap: {
     alignItems: 'center',
     justifyContent: 'center',
   },
 
-  ockeanguudexplrrhIconCircle: {
+  oassicrmmenjoiirhIconCircle: {
     width: 44,
     height: 44,
     borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  ockeanguudexplrrhIconCircleFocused: {
+  oassicrmmenjoiirhIconCircleFocused: {
     borderWidth: 1,
     borderColor: '#00D4FF',
     backgroundColor: '#00D4FF1A',
   },
 
-  ockeanguudexplrrhLabel: {
+  oassicrmmenjoiirhLabel: {
     fontSize: 9,
     fontWeight: '600',
     marginTop: 6,
     textAlign: 'center',
   },
 
-  ockeanguudexplrrhLabelIdle: {
+  oassicrmmenjoiirhLabelIdle: {
     color: '#FFFFFF59',
   },
 });
 
-export default Ockeanguudexplrrtab;
+export default Oassicrmmenjoiirtab;

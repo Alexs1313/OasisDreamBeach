@@ -15,7 +15,7 @@ import {
   type ImageSourcePropType,
 } from 'react-native';
 
-type OckeanguudexplrrhOnbStep = {
+type OassicrmmenjoiirhOnbStep = {
   id: string;
   bg: ImageSourcePropType;
   pill: string;
@@ -24,19 +24,19 @@ type OckeanguudexplrrhOnbStep = {
   cta: string;
 };
 
-const Ockeanguudexplrrhonb = () => {
-  const ockeanguudexplrrNavigation = useNavigation<any>();
-  const [ockeanguudexplrrStep, setOckeanguudexplrrStep] = useState(0);
+const Oassicrmmenjoiirhonb = () => {
+  const oassicrmmenjoiirNavigation = useNavigation<any>();
+  const [oassicrmmenjoiirStep, setOassicrmmenjoiirStep] = useState(0);
 
-  const ockeanguudexplrrSteps: OckeanguudexplrrhOnbStep[] = useMemo(
+  const oassicrmmenjoiirSteps: OassicrmmenjoiirhOnbStep[] = useMemo(
     () => [
       {
         id: 'welcome',
         bg: require('../../assets/i/ossdrmeexplrbecloadbg.png'),
-        pill: 'WELCOME TO',
-        title: Platform.OS === 'ios' ? 'OASIC DREAM ENJOY' : 'OASIS SHORE',
+        pill: 'WELCOME',
+        title: Platform.OS === 'ios' ? 'DISCOVER HIDDEN SHORES' : 'OASIS SHORE',
         subtitle:
-          'Curated shores. Hidden worlds. Discover the ocean’s finest secrets.',
+          'Explore curated beaches, ocean stories, and peaceful coastal places.',
         cta: 'CONTINUE',
       },
 
@@ -46,7 +46,7 @@ const Ockeanguudexplrrhonb = () => {
         pill: 'DISCOVER',
         title: 'LOCATION OF THE\nDAY',
         subtitle:
-          'Each dawn reveals a new shore. Curated destinations with coordinates, stories and the secrets that guidebooks omit.',
+          'Each dawn reveals a new shore. Discover curated destinations with coordinates, stories, and thoughtful details beyond ordinary guidebooks.',
         cta: 'CONTINUE',
       },
       {
@@ -55,7 +55,7 @@ const Ockeanguudexplrrhonb = () => {
         pill: 'EXPLORE',
         title: 'INTERACTIVE\nWORLD MAP',
         subtitle:
-          "Navigate the globe's most extraordinary coasts. Tap any marker to unlock a hidden destination.",
+          'Navigate the globe’s most extraordinary coasts. Tap any marker to reveal a hidden destination.',
         cta: 'CONTINUE',
       },
       {
@@ -64,70 +64,70 @@ const Ockeanguudexplrrhonb = () => {
         pill: 'EXPERIENCE',
         title: 'STORIES & QUIZ',
         subtitle:
-          "Deep dives into ocean culture. Test your knowledge. Explore the world's finest shores.",
+          'Dive into ocean culture, test your knowledge, and explore shores shaped by nature and history.',
         cta: 'BEGIN YOUR JOURNEY',
       },
     ],
     [],
   );
 
-  const ockeanguudexplrrCurrent = ockeanguudexplrrSteps[ockeanguudexplrrStep];
+  const oassicrmmenjoiirCurrent = oassicrmmenjoiirSteps[oassicrmmenjoiirStep];
 
-  const ockeanguudexplrrNext = async () => {
-    ockeanguudexplrrStep === 3
-      ? ockeanguudexplrrNavigation.replace('Ockeanguudexplrrtab' as never)
-      : setOckeanguudexplrrStep(v => v + 1);
+  const oassicrmmenjoiirNext = async () => {
+    oassicrmmenjoiirStep === 3
+      ? oassicrmmenjoiirNavigation.replace('Oassicrmmenjoiirtab' as never)
+      : setOassicrmmenjoiirStep(v => v + 1);
   };
 
-  const ockeanguudexplrrSkip = async () => {
-    ockeanguudexplrrNavigation.replace('Ockeanguudexplrrtab' as never);
+  const oassicrmmenjoiirSkip = async () => {
+    oassicrmmenjoiirNavigation.replace('Oassicrmmenjoiirtab' as never);
   };
 
   return (
     <ImageBackground
-      source={ockeanguudexplrrCurrent.bg}
-      style={styles.ockeanguudexplrrbg}>
+      source={oassicrmmenjoiirCurrent.bg}
+      style={styles.oassicrmmenjoiirbg}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.ockeanguudexplrrscrollContent}>
-        <View style={styles.ockeanguudexplrrsafe}>
-          <View style={styles.ockeanguudexplrrtopRow}>
-            <Pressable onPress={ockeanguudexplrrSkip} hitSlop={12}>
-              <Text style={styles.ockeanguudexplrrskip}>SKIP</Text>
+        contentContainerStyle={styles.oassicrmmenjoiirscrollContent}>
+        <View style={styles.oassicrmmenjoiirsafe}>
+          <View style={styles.oassicrmmenjoiirtopRow}>
+            <Pressable onPress={oassicrmmenjoiirSkip} hitSlop={12}>
+              <Text style={styles.oassicrmmenjoiirskip}>SKIP</Text>
             </Pressable>
           </View>
 
-          <View style={styles.ockeanguudexplrrlogo}>
+          <View style={styles.oassicrmmenjoiirlogo}>
             <Image source={require('../../assets/i/ossdrmeexplrbecllg.png')} />
           </View>
 
-          <View style={styles.ockeanguudexplrrcontent}>
-            <View style={styles.ockeanguudexplrrpill}>
-              <Text style={styles.ockeanguudexplrrpillText}>
-                {ockeanguudexplrrCurrent.pill}
+          <View style={styles.oassicrmmenjoiircontent}>
+            <View style={styles.oassicrmmenjoiirpill}>
+              <Text style={styles.oassicrmmenjoiirpillText}>
+                {oassicrmmenjoiirCurrent.pill}
               </Text>
             </View>
 
-            <Text style={styles.ockeanguudexplrrtitle}>
-              {ockeanguudexplrrCurrent.title}
+            <Text style={styles.oassicrmmenjoiirtitle}>
+              {oassicrmmenjoiirCurrent.title}
             </Text>
-            <Text style={styles.ockeanguudexplrrsubtitle}>
-              {ockeanguudexplrrCurrent.subtitle}
+            <Text style={styles.oassicrmmenjoiirsubtitle}>
+              {oassicrmmenjoiirCurrent.subtitle}
             </Text>
           </View>
 
-          <View style={styles.ockeanguudexplrrbottom}>
-            <View style={styles.ockeanguudexplrrdots}>
-              {ockeanguudexplrrSteps.map((s, idx) => {
-                const active = idx === ockeanguudexplrrStep;
+          <View style={styles.oassicrmmenjoiirbottom}>
+            <View style={styles.oassicrmmenjoiirdots}>
+              {oassicrmmenjoiirSteps.map((s, idx) => {
+                const active = idx === oassicrmmenjoiirStep;
                 return (
                   <View
                     key={s.id}
                     style={[
-                      styles.ockeanguudexplrrdot,
+                      styles.oassicrmmenjoiirdot,
                       active
-                        ? styles.ockeanguudexplrrdotActive
-                        : styles.ockeanguudexplrrdotIdle,
+                        ? styles.oassicrmmenjoiirdotActive
+                        : styles.oassicrmmenjoiirdotIdle,
                     ]}
                   />
                 );
@@ -135,13 +135,13 @@ const Ockeanguudexplrrhonb = () => {
             </View>
 
             <Pressable
-              onPress={ockeanguudexplrrNext}
-              style={styles.ockeanguudexplrrctaPress}>
+              onPress={oassicrmmenjoiirNext}
+              style={styles.oassicrmmenjoiirctaPress}>
               <LinearGradient
                 colors={['#0099CC', '#00D4FF']}
-                style={styles.ockeanguudexplrrcta}>
-                <Text style={styles.ockeanguudexplrrctaText}>
-                  {ockeanguudexplrrCurrent.cta}
+                style={styles.oassicrmmenjoiircta}>
+                <Text style={styles.oassicrmmenjoiirctaText}>
+                  {oassicrmmenjoiirCurrent.cta}
                 </Text>
                 <Image
                   source={require('../../assets/i/ossdrmeexplrbecarr.png')}
@@ -155,17 +155,17 @@ const Ockeanguudexplrrhonb = () => {
   );
 };
 
-export default Ockeanguudexplrrhonb;
+export default Oassicrmmenjoiirhonb;
 
 const styles = StyleSheet.create({
-  ockeanguudexplrrbg: {flex: 1},
+  oassicrmmenjoiirbg: {flex: 1},
 
-  ockeanguudexplrrsafe: {flex: 1, paddingBottom: 50},
+  oassicrmmenjoiirsafe: {flex: 1, paddingBottom: 50},
 
-  ockeanguudexplrrlogo: {alignSelf: 'center', marginBottom: 5},
-  ockeanguudexplrrscrollContent: {flexGrow: 1},
+  oassicrmmenjoiirlogo: {alignSelf: 'center', marginBottom: 5},
+  oassicrmmenjoiirscrollContent: {flexGrow: 1},
 
-  ockeanguudexplrrtopRow: {
+  oassicrmmenjoiirtopRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -173,19 +173,19 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     marginBottom: 10,
   },
-  ockeanguudexplrrskip: {
+  oassicrmmenjoiirskip: {
     color: '#7BAFC4',
     fontSize: 14,
     fontWeight: '500',
   },
 
-  ockeanguudexplrrcontent: {
+  oassicrmmenjoiircontent: {
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 26,
     paddingTop: 10,
   },
-  ockeanguudexplrrpill: {
+  oassicrmmenjoiirpill: {
     alignSelf: 'center',
     borderWidth: 1,
     borderColor: '#00D4FF40',
@@ -195,12 +195,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#00D4FF1F',
     marginBottom: 18,
   },
-  ockeanguudexplrrpillText: {
+  oassicrmmenjoiirpillText: {
     color: '#7DE8FF',
     letterSpacing: 2,
     fontSize: 10,
   },
-  ockeanguudexplrrtitle: {
+  oassicrmmenjoiirtitle: {
     color: '#00D1FF',
     fontSize: 34,
 
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Cinzel-Bold',
     marginBottom: 44,
   },
-  ockeanguudexplrrsubtitle: {
+  oassicrmmenjoiirsubtitle: {
     color: '#7BAFC4',
     textAlign: 'center',
     fontSize: 15,
@@ -219,24 +219,24 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  ockeanguudexplrrbottom: {
+  oassicrmmenjoiirbottom: {
     paddingHorizontal: 22,
   },
-  ockeanguudexplrrdots: {
+  oassicrmmenjoiirdots: {
     flexDirection: 'row',
     alignSelf: 'center',
     gap: 6,
     marginBottom: 16,
   },
-  ockeanguudexplrrdot: {
+  oassicrmmenjoiirdot: {
     height: 6,
     borderRadius: 999,
   },
-  ockeanguudexplrrdotIdle: {width: 6, backgroundColor: '#FFFFFF33'},
-  ockeanguudexplrrdotActive: {width: 26, backgroundColor: '#00D4FF'},
+  oassicrmmenjoiirdotIdle: {width: 6, backgroundColor: '#FFFFFF33'},
+  oassicrmmenjoiirdotActive: {width: 26, backgroundColor: '#00D4FF'},
 
-  ockeanguudexplrrctaPress: {borderRadius: 14, overflow: 'hidden'},
-  ockeanguudexplrrcta: {
+  oassicrmmenjoiirctaPress: {borderRadius: 14, overflow: 'hidden'},
+  oassicrmmenjoiircta: {
     height: 47,
     borderRadius: 14,
     marginTop: 8,
@@ -251,12 +251,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  ockeanguudexplrrctaText: {
+  oassicrmmenjoiirctaText: {
     color: '#001018',
     fontSize: 13,
     fontWeight: '600',
   },
-  ockeanguudexplrrctaArrow: {
+  oassicrmmenjoiirctaArrow: {
     color: '#001018',
     fontSize: 18,
     marginTop: -1,

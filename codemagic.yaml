@@ -4,17 +4,17 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: OasicDreamAPIKey
+      app_store_connect: RaynBabelAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.jgkqw.turme.nbjfk
+        bundle_identifier: com.ffhgoaci.ggjoeq
       vars:
-        BUNDLE_ID: com.jgkqw.turme.nbjfk
+        BUNDLE_ID: com.ffhgoaci.ggjoeq
         XCODE_WORKSPACE: OasisDreamBeach.xcworkspace
         XCODE_SCHEME: OasisDreamBeach
-        APP_STORE_APPLE_ID: 6766966760
+        APP_STORE_APPLE_ID: 6767536689
     scripts:
       - name: Install npm dependencies
         script: |

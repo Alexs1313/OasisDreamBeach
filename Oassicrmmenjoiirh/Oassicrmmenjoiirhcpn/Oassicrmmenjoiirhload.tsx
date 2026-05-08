@@ -11,27 +11,27 @@ import React, {useEffect} from 'react';
 
 import {useNavigation} from '@react-navigation/native';
 
-const Ockeanguudexplrrhload = () => {
-  const ockeanguudexplrrNavigation = useNavigation();
+const Oassicrmmenjoiirhload = () => {
+  const oassicrmmenjoiirNavigation = useNavigation();
 
   useEffect(() => {
-    const ockeanguudexplrrTimer = setTimeout(() => {
-      ockeanguudexplrrNavigation.navigate('Ockeanguudexplrrhonb' as never);
+    const oassicrmmenjoiirTimer = setTimeout(() => {
+      oassicrmmenjoiirNavigation.navigate('Oassicrmmenjoiirhonb' as never);
     }, 6000);
 
     return () => {
-      clearTimeout(ockeanguudexplrrTimer);
+      clearTimeout(oassicrmmenjoiirTimer);
     };
-  }, [ockeanguudexplrrNavigation]);
+  }, [oassicrmmenjoiirNavigation]);
 
   return (
     <ImageBackground
       source={require('../../assets/i/ossdrmeexplrbecloadbg.png')}
-      style={styles.ockeanguudexplrrimageBg}>
+      style={styles.oassicrmmenjoiirimageBg}>
       <ScrollView
-        contentContainerStyle={styles.ockeanguudexplrrscrollContent}
+        contentContainerStyle={styles.oassicrmmenjoiirscrollContent}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.ockeanguudexplrrcenter}>
+        <View style={styles.oassicrmmenjoiircenter}>
           <Image
             source={
               Platform.OS === 'ios'
@@ -50,27 +50,27 @@ const Ockeanguudexplrrhload = () => {
   );
 };
 
-export default Ockeanguudexplrrhload;
+export default Oassicrmmenjoiirhload;
 
 const styles = StyleSheet.create({
-  ockeanguudexplrrimageBg: {
+  oassicrmmenjoiirimageBg: {
     flex: 1,
   },
-  ockeanguudexplrrscrollContent: {
+  oassicrmmenjoiirscrollContent: {
     flexGrow: 1,
   },
-  ockeanguudexplrrcenter: {
+  oassicrmmenjoiircenter: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
-  ockeanguudexplrrbottomWrap: {
+  oassicrmmenjoiirbottomWrap: {
     justifyContent: 'flex-end',
     alignItems: 'center',
     paddingBottom: 40,
   },
-  ockeanguudexplrrbottomText: {
+  oassicrmmenjoiirbottomText: {
     color: '#FFFFFF',
     fontSize: 12,
     fontFamily: 'DmSans-Regular',
